@@ -63,16 +63,22 @@ header{
     text-align: center;
     margin-bottom: 1rem;
 }
+/* Cart */
 .cart{
     position: fixed;
     top: 0px;
-    right: 0;
+    right: -100%;
     width: 360px;
     height: 100vh;
     padding: 20px;
     background-color: var(--bg-color);
     box-shadow: -2px 0px 4px hsl(0 4% 15% / 10%);
+    transition: 0.6s;
 }
+.cart.active{
+    right: 0;
+}
+
 .cart-title{
     text-align: center;
     font-size: 1.7;
@@ -95,6 +101,61 @@ header{
 .detail-box{
     display: grid;
     row-gap: 0.5rem;
+}
+.cart-product-title{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.cart-price{
+    font-weight: 500;
+}
+.cart-quantity{
+    border: 1px solid var(--text-color);
+    outline-color: var(--text-color);
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.cart-remove{
+    font-size: 24px;
+    cursor: pointer;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    border-top: 1px solid var(--text-color);
+}
+.total-title{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.total-price{
+    margin-left: 0.5rem; 
+}
+.total-title,.total-price{
+    margin-top: 0.5rem;
+}
+.btn-buy{   
+    display: flex;
+    margin: 1rem auto 0 auto;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-buy:hover{
+    background-color: hsl(0 4% 15% / 15%);
+    transition: 0.5s;
+}
+#close-cart{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    cursor: pointer;
 }
 /* Shop-CONTENT */
 .shop-content{
@@ -162,8 +223,8 @@ header{
     padding: 30px 20px;
     text-align: center;
 }
-.item-footer{
-    position: relative;
+.item-footer{   
+    color: var(--text-color);
 }
 .item-footer:hover{
     cursor: pointer;
