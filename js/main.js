@@ -7,9 +7,9 @@ let closeCart = document.querySelector("#close-cart")
 cartIcon.onclick = () =>{
     Cart.classList.add("active");
 };
-closeCart.onclick = () =>{
-    Cart.classList.remove("active");
-};
+    closeCart.onclick = () =>{
+        Cart.classList.remove("active");
+    };
 
 //Cart Working
 //Kiểm tra trạng thái của tài liệu 
